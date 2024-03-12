@@ -1,1 +1,90 @@
-<!doctype html><html lang="en"><head><!-- hexo injector head_begin start --><meta name="description" content="......"></meta><meta name="keywords" content="不倦"></meta><meta name="author" content="星辰星宇1314"></meta><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><script type="module" crossorigin src="/static/js/120aa8f8.js"></script><link rel="stylesheet" href="/static/css/a14e1a22.css"><!-- hexo injector head_end start --><script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script rel="preload" src="https://unpkg.com/blueimp-md5@^2.19.0/js/md5.min.js"></script><script rel="preload" src="https://unpkg.com/lodash@^4.17.21/lodash.min.js"></script><link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" /><script rel="preload" src="https://unpkg.com/valine@^1.5.1/dist/Valine.min.js"></script><script rel="preload" src="https://unpkg.com/leancloud-storage@^4.15.0/dist/av-min.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body id="body-container"><noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!doctype html>  
+<html lang="en">  
+<head>  
+<!-- hexo injector head_begin start -->  
+<meta name="description" content="......"></meta>  
+<meta name="keywords" content="不倦"></meta>  
+<meta name="author" content="星辰星宇1314"></meta>  
+<!-- hexo injector head_begin end -->  
+<meta charset="utf-8">  
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+<meta name="viewport" content="width=device-width,initial-scale=1">  
+<link rel="icon" href="/favicon.ico">  
+<script type="module" crossorigin src="/static/js/120aa8f8.js"></script>  
+<link rel="stylesheet" href="/static/css/a14e1a22.css">  
+<!-- hexo injector head_end start -->  
+<script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>  
+<script rel="preload" src="https://unpkg.com/blueimp-md5@^2.19.0/js/md5.min.js"></script>  
+<script rel="preload" src="https://unpkg.com/lodash@^4.17.21/lodash.min.js"></script>  
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" />  
+<script rel="preload" src="https://unpkg.com/valine@^1.5.1/dist/Valine.min.js"></script>  
+<script rel="preload" src="https://unpkg.com/leancloud-storage@^4.15.0/dist/av-min.js"></script>  
+<!-- hexo injector head_end end -->  
+<meta name="generator" content="Hexo 7.0.0">  
+  
+<!-- 添加生日祝福代码 -->  
+<style>  
+  /* 祝福弹窗样式 */  
+  #birthdayModal {  
+    display: none; /* 初始隐藏 */  
+    position: fixed; /* 弹窗位置固定 */  
+    z-index: 1; /* 弹窗位于其他元素之上 */  
+    left: 0;  
+    top: 0;  
+    width: 100%; /* 弹窗宽度全屏 */  
+    height: 100%; /* 弹窗高度全屏 */  
+    overflow: auto; /* 允许弹窗内容滚动 */  
+    background-color: rgba(0,0,0,0.4); /* 弹窗背景色 */  
+  }  
+    
+  #birthdayModalContent {  
+    background-color: #fefefe;  
+    margin: 15% auto; /* 弹窗内容居中 */  
+    padding: 20px;  
+    border: 1px solid #888;  
+    width: 80%; /* 弹窗内容宽度 */  
+  }  
+    
+  /* 弹窗内的关闭按钮样式 */  
+  #close {  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
+  }  
+    
+  #close:hover,  
+  #close:focus {  
+    color: black;  
+    text-decoration: none;  
+    cursor: pointer;  
+  }  
+</style>  
+  
+<script>  
+  // 当文档加载完成时执行  
+  window.onload = function() {  
+    // 显示生日祝福弹窗  
+    showBirthdayModal();  
+  };  
+  
+  function showBirthdayModal() {  
+    // 获取弹窗元素  
+    var modal = document.getElementById('birthdayModal');  
+    // 获取弹窗内容元素  
+    var modalContent = document.getElementById('birthdayModalContent');  
+      
+    // 显示弹窗  
+    modal.style.display = "block";  
+      
+    // 获取 <span> 元素，用于插入关闭按钮  
+    var span = document.getElementsByClassName("close")[0];  
+      
+    // 当用户点击 <span> (x), 关闭弹窗  
+    span.onclick = function() {  
+      modal.style.display = "none";  
+    }  
+      
+    // 当用户点击其他地方时，也关闭弹窗  
+    window.onclick = function(event) {  
+      if (event.target == modal)
